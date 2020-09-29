@@ -12,7 +12,7 @@ function App() {
   const [gastos, guardarGastos] = useState([])
   const [gasto, guardarGasto] = useState({})
   const [creargasto, guardarCrearGasto] = useState(false)
-  
+
   //useeffect que actualiza el restante
   useEffect(() => { 
     if (creargasto) { 
@@ -29,7 +29,7 @@ function App() {
     //resetear a false
     guardarCrearGasto(false)
 
-  },[gasto])
+  },[gasto,creargasto,gastos,restante])
   
 
   return (
